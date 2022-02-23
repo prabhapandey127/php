@@ -45,15 +45,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <body>
     <form action="./validation.php" method="post">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" value="<?=$name;?>">
             <span class="error">* <?php echo $nameErr; ?></span>
             <br>
-            <label for="fname">Father's Name</label>
-            <input type="text" name="fname" id="fname">
-            <span class="error">*<?php echo $fnameErr; ?></span>
+            <label for="fname"> Father's Name</label>
+            <input type="text" name="fname" id="fname" value="<?=$fname; ?>">
+            <span class="error">*<?= $fnameErr; ?></span>
             <br> 
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" value="<?=$email;?>">
             <span class="error">*<?php echo $emailErr; ?></span>
             <br>
             <input type="submit" value="submit">
@@ -61,8 +61,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
            
     </form>
      <h2>Input Value :-</h2>
-            Name : - <b><?php echo $name; ?></b> <br>
-            Father's Name : - <b><?php echo $fname; ?></b><br>
-            Email : - <b><?php echo $email; ?></b>
+    Name : - <b><?php echo $name; ?></b> <br>
+    Father's Name : - <b><?php echo $fname; ?></b><br>
+    Email : - <b><?php echo $email; ?></b>
 </body>
 </html>
